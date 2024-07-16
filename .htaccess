@@ -1,0 +1,2 @@
+redirectMatch 301 ^(.*)$ https://hgracia.github.io/colora-web/
+redirectMatch permanent ^(.*)$ https://hgracia85.wixsite.com/colora
