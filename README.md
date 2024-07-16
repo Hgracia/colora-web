@@ -1,2 +1,2 @@
-# colora_web
+# colora-web
 Web para colora
