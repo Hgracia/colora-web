@@ -48,14 +48,82 @@
             text-align: center;
             padding: 10px 0;
         }
+        /* Estilos para el menú de navegación */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .nav-logo img {
+            height: 50px;
+        }
+        .nav-title {
+            font-size: 2rem;
+            color: #d9d9d9;
+            display: flex;
+            align-items: center;
+        }
+        .nav-title span:nth-child(1) { color: #3d85c6; }
+        .nav-title span:nth-child(2) { color: #4a86e8; }
+        .nav-title span:nth-child(3) { color: #6aa84f; }
+        .nav-title span:nth-child(4) { color: #e06666; }
+        .nav-title span:nth-child(5) { color: #a64d79; }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            color: #e6b800;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #e6b800;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            background-color: #444;
+        }
+        .nav-links a.active {
+            color: #cccccc;
+        }
     </style>
 </head>
 <body>
+    <!-- Menú de navegación -->
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="/colora-web/docs/assets/images/colora.png" alt="Logo">
+        </div>
+        <div class="nav-title">
+            <span>C</span><span>o</span><span>l</span><span>o</span><span>ra</span>
+        </div>
+        <div class="nav-links">
+            <a href="/colora-web/index.html" class="active">Inicio</a>
+            <a href="#feedback">Feedback</a>
+            <a href="#historia">Historia</a>
+            <a href="#daltonicos">Daltónicos</a>
+        </div>
+    </div>
     <div id="SITE_CONTAINER" class="site-container">
         <div id="main_MF" class="main-mf">
-            <div id="SCROLL_TO_TOP" class="scroll-to-top" tabindex="-1" role="region" aria-label="top of page">
-                <span>top of page</span>
-            </div>
             <div id="BACKGROUND_GROUP" class="background-group">
                 <div id="BACKGROUND_GROUP_TRANSITION_GROUP">
                     <div id="pageBackground_xh74s" class="pageBackground_xh74s">
@@ -70,21 +138,11 @@
             <div id="site-root" class="site-root">
                 <div id="masterPage" class="mesh-layout remove-wrappers masterPage css-editing-scope">
                     <header id="SITE_HEADER" class="site-header" tabindex="-1">
-                        <div class="_C0cVf">
-                            <div class="_4XcTfy" data-testid="screenWidthContainerBg"></div>
-                        </div>
                         <div class="U4Bvut">
-                            <div class="G5K6X8">
-                                <div class="gUbusX" data-testid="screenWidthContainerBgCenter"></div>
-                            </div>
                             <div class="CJF7A2">
                                 <div data-mesh-id="SITE_HEADERinlineContent" data-testid="inline-content">
                                     <div data-mesh-id="SITE_HEADERinlineContent-gridContainer" data-testid="mesh-container-content">
                                         <section id="comp-lvkz4p0v" class="comp-lvkz4p0v CohWsy wixui-column-strip">
-                                            <div id="bgLayers_comp-lvkz4p0v" data-hook="bgLayers" class="if7Vw2">
-                                                <div data-testid="colorUnderlay" class="tcElKx i1tH8h"></div>
-                                                <div id="bgMedia_comp-lvkz4p0v" class="wG8dni"></div>
-                                            </div>
                                             <div data-testid="columns" class="V5AUxf">
                                                 <div id="comp-lvkz4p0x" class="comp-lvkz4p0x YzqVVZ wixui-column-strip__column">
                                                     <div id="bgLayers_comp-lvkz4p0x" data-hook="bgLayers" class="MW5IWV">
