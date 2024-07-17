@@ -19,11 +19,6 @@
             left: 0;
             z-index: 100;
         }
-        .wix-ads {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
         .background-group {
             position: relative;
         }
@@ -66,14 +61,11 @@
         .nav-title {
             font-size: 2rem;
             color: #d9d9d9;
+            height: 80px;
+            width: 360px;
             display: flex;
             align-items: center;
         }
-        .nav-title span:nth-child(1) { color: #3d85c6; }
-        .nav-title span:nth-child(2) { color: #4a86e8; }
-        .nav-title span:nth-child(3) { color: #6aa84f; }
-        .nav-title span:nth-child(4) { color: #e06666; }
-        .nav-title span:nth-child(5) { color: #a64d79; }
         .nav-links {
             display: flex;
         }
@@ -104,132 +96,89 @@
         .nav-links a.active {
             color: #cccccc;
         }
+        /* Estilos para la sección central */
+        .central-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: calc(100vh - 80px); /* Ajustar para dejar espacio al menú */
+            overflow: hidden;
+        }
+        .central-section img.background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7; /* Transparencia para el fondo */
+        }
+        .central-section .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .central-section video {
+            width: 80%;
+            max-width: 600px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .central-section img.foreground {
+            width: 80%;
+            max-width: 400px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <div class="nav-container">
-        <div class="nav-logo">
-            <img src="/colora-web/docs/assets/images/colora.png" alt="Logo">
+    <header id="SITE_HEADER" class="site-header" tabindex="-1">
+        <!-- Menú de navegación -->
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/colora-web/docs/assets/images/colora.png" alt="Logo">
+            </div>
+            <div class="nav-title">
+                <img src="/colora-web/docs/assets/images/colora_colored.png" alt="Logo letras">
+            </div>
+            <div class="nav-links">
+                <a href="/colora-web/index.html" class="active">Inicio</a>
+                <a href="/colora-web/feedback.html">Feedback</a>
+                <a href="/colora-web/historia.html">Historia</a>
+                <a href="/colora-web/daltonicos.html">Daltónicos</a>
+            </div>
         </div>
-        <div class="nav-title">
-            <span>C</span><span>o</span><span>l</span><span>o</span><span>ra</span>
-        </div>
-        <div class="nav-links">
-            <a href="/colora-web/index.html" class="active">Inicio</a>
-            <a href="#feedback">Feedback</a>
-            <a href="#historia">Historia</a>
-            <a href="#daltonicos">Daltónicos</a>
+    </header>
+    <!-- Sección central -->
+    <div class="central-section">
+        <img src="/colora-web/docs/assets/images/fondo_portada.png" alt="Background Image" class="background">
+        <div class="content">
+            <img src="/colora-web/docs/assets/images/funciones_pequeño_trans.png" alt="Foreground Image" class="foreground">
+            <video controls>
+                <source src="/colora-web/docs/assets/images/Colora_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="https://play.google.com/store/apps/details?id=com.coloraapp.colora">
+                <img src="/colora-web/docs/assets/images/google-play-badge.png" alt="Imagen de ejemplo" class="foreground">
+            </a>
         </div>
     </div>
-    <div id="SITE_CONTAINER" class="site-container">
-        <div id="main_MF" class="main-mf">
-            <div id="BACKGROUND_GROUP" class="background-group">
-                <div id="BACKGROUND_GROUP_TRANSITION_GROUP">
-                    <div id="pageBackground_xh74s" class="pageBackground_xh74s">
-                        <div id="bgLayers_pageBackground_xh74s" class="MW5IWV">
-                            <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
-                            <div id="bgMedia_pageBackground_xh74s" class="VgO9Yg"></div>
-                            <div data-testid="bgOverlay" class="m4khSP"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="site-root" class="site-root">
-                <div id="masterPage" class="mesh-layout remove-wrappers masterPage css-editing-scope">
-                    <header id="SITE_HEADER" class="site-header" tabindex="-1">
-                        <div class="U4Bvut">
-                            <div class="CJF7A2">
-                                <div data-mesh-id="SITE_HEADERinlineContent" data-testid="inline-content">
-                                    <div data-mesh-id="SITE_HEADERinlineContent-gridContainer" data-testid="mesh-container-content">
-                                        <section id="comp-lvkz4p0v" class="comp-lvkz4p0v CohWsy wixui-column-strip">
-                                            <div data-testid="columns" class="V5AUxf">
-                                                <div id="comp-lvkz4p0x" class="comp-lvkz4p0x YzqVVZ wixui-column-strip__column">
-                                                    <div id="bgLayers_comp-lvkz4p0x" data-hook="bgLayers" class="MW5IWV">
-                                                        <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
-                                                        <div id="bgMedia_comp-lvkz4p0x" class="VgO9Yg"></div>
-                                                    </div>
-                                                    <div data-mesh-id="comp-lvkz4p0xinlineContent" data-testid="inline-content">
-                                                        <div data-mesh-id="comp-lvkz4p0xinlineContent-gridContainer" data-testid="mesh-container-content">
-                                                            <div id="comp-lvkz4p0y" class="comp-lvkz4p0y wixui-image">
-                                                                <div data-testid="linkElement">
-                                                                    <a data-testid="linkElement" href="#comp-lpje23ji">
-                                                                        <wix-image id="img_comp-lvkz4p0y" class="_1-6Y1F" data-image-info="{&quot;containerId&quot;:&quot;comp-lvkz4p0y&quot;,&quot;targetWidth&quot;:150,&quot;targetHeight&quot;:35,&quot;displayMode&quot;:&quot;fill&quot;,&quot;imageData&quot;:{&quot;width&quot;:150,&quot;height&quot;:35,&quot;uri&quot;:&quot;1e3c27_929d7b5a28b7407d9f8f8ba1b92c5a92~mv2.png&quot;,&quot;name&quot;:&quot;Colora Logo-01.png&quot;,&quot;displayMode&quot;:&quot;fill&quot;}}"
-                                                                            data-has-ssr-src=""
-                                                                            data-bg-effect-name=""
-                                                                            data-image-idx="1"
-                                                                            data-image-width="150"
-                                                                            data-image-height="35"
-                                                                            data-align-type="center"
-                                                                            data-zoomed-height="35"
-                                                                            data-zoomed-width="150"
-                                                                            data-screen-inset="true"
-                                                                            style="width: 150px; height: 35px;">
-                                                                            <img src="/colora-web/docs/assets/images/colora.png"
-                                                                                alt="Colora Logo-01.png" style="width: 150px; height: 35px; object-fit: cover;">
-                                                                        </wix-image>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="comp-lvkz4p11" class="comp-lvkz4p11 YzqVVZ wixui-column-strip__column">
-                                                    <div id="bgLayers_comp-lvkz4p11" data-hook="bgLayers" class="MW5IWV">
-                                                        <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
-                                                        <div id="bgMedia_comp-lvkz4p11" class="VgO9Yg"></div>
-                                                    </div>
-                                                    <div data-mesh-id="comp-lvkz4p11inlineContent" data-testid="inline-content">
-                                                        <div data-mesh-id="comp-lvkz4p11inlineContent-gridContainer" data-testid="mesh-container-content">
-                                                            <div id="comp-lvkz4p14" class="KcpHeO tz5f0K comp-lvkz4p14 wixui-rich-text">
-                                                                <p class="font_6"><span class="color_15"><span style="letter-spacing:normal;">Login</span></span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="comp-lvkz4p13" class="comp-lvkz4p13 YzqVVZ wixui-column-strip__column">
-                                                    <div id="bgLayers_comp-lvkz4p13" data-hook="bgLayers" class="MW5IWV">
-                                                        <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
-                                                        <div id="bgMedia_comp-lvkz4p13" class="VgO9Yg"></div>
-                                                    </div>
-                                                    <div data-mesh-id="comp-lvkz4p13inlineContent" data-testid="inline-content">
-                                                        <div data-mesh-id="comp-lvkz4p13inlineContent-gridContainer" data-testid="mesh-container-content">
-                                                            <div id="comp-lvkz4p15" class="KcpHeO tz5f0K comp-lvkz4p15 wixui-rich-text">
-                                                                <p class="font_6"><span class="color_15"><span style="letter-spacing:normal;">Contact</span></span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                    <main id="PAGES_CONTAINER" class="pages-container">
-                        <section>
-                            <img src="/colora-web/docs/assets/images/funciones_pequeño_trans.png" alt="Imagen de ejemplo">
-                        </section>
-                        <section>
-                            <a href="https://play.google.com/store/apps/details?id=com.coloraapp.colora">
-                                <img src="/colora-web/docs/assets/images/google-play-badge.png" alt="Imagen de ejemplo">
-                            </a>
-                        </section>
-                    </main>
-                    <footer id="SITE_FOOTER" class="footer">
-                        <div data-mesh-id="SITE_FOOTERinlineContent" data-testid="inline-content">
-                            <div data-mesh-id="SITE_FOOTERinlineContent-gridContainer" data-testid="mesh-container-content">
-                                <div id="comp-lbktz6z5" class="KcpHeO tz5f0K comp-lbktz6z5 wixui-rich-text">
-                                    <p class="font_8"><span style="letter-spacing:normal;">&copy; 2024 by Colora</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+    <footer id="SITE_FOOTER" class="footer">
+        <div data-mesh-id="SITE_FOOTERinlineContent" data-testid="inline-content">
+            <div data-mesh-id="SITE_FOOTERinlineContent-gridContainer" data-testid="mesh-container-content">
+                <div id="comp-lbktz6z5" class="KcpHeO tz5f0K comp-lbktz6z5 wixui-rich-text">
+                    <p><a href="mailto:ghgracia85@gmail.com" style="color: #e6b800;">ghgracia85@gmail.com</a></p>
+                    <p><a href="/colora-web/politica-de-privacidad.html" style="color: #e6b800;">Política de privacidad</a></p>
+                    <p class="font_8"><span style="letter-spacing:normal;">&copy; 2024 by Colora</span></p>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
     <script>
         // Añade tus scripts personalizados aquí
     </script>
