@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dáltonicos</title>
+    <style>
+        /* Añade tus estilos personalizados aquí */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* Estilos para el menú de navegación */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .nav-logo img {
+            height: 50px;
+        }
+        .nav-title {
+            color: #d9d9d9;
+            display: flex;
+            align-items: center;
+        }
+        .nav-title-img {
+            width: 250px;
+            height: auto;
+            margin: 5px;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            color: #e6b800;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #e6b800;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            background-color: #444;
+        }
+        .nav-links a.active {
+            color: #cccccc;
+        }
+        /* Estilos para la sección central */
+        .central-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: calc(100vh - 80px); /* Ajustar para dejar espacio al menú */
+            overflow: hidden;
+        }
+        .central-section img.background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7; /* Transparencia para el fondo */
+        }
+        .central-section .content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .central-section video {
+            width: 80%;
+            max-width: 600px;
+        }
+        .central-section img.foreground {
+            width: 80%;
+            max-width: 400px;
+        }
+        .central-section image-row {
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            gap: 20px;
+            justify-content: center;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 600px;
+        }
+        .contact-form h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #000;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .contact-form .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-form .form-row div {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .contact-form .form-row div:last-child {
+            margin-right: 0;
+        }
+        .contact-form button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header id="SITE_HEADER" tabindex="-1">
+        <!-- Menú de navegación -->
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/colora-web/index.html">
+                    <img src="/colora-web/docs/assets/images/colora.png" alt="Logo">
+                </a>
+            </div>
+            <div class="nav-title">
+                <img src="/colora-web/docs/assets/images/colora_colored.png" class="nav-title-img" alt="Logo letras">
+            </div>
+            <div class="nav-links">
+                <a href="/colora-web/index.html">Inicio</a>
+                <a href="https://colora.canny.io/feature-requests">Feedback</a>
+                <a href="/colora-web/historia.html">Historia</a>
+                <a href="/colora-web/daltonicos.html" class="active">Daltónicos</a>
+            </div>
+        </div>
+    </header>
+    <!-- Sección central -->
+    <div class="central-section">
+        <div class="content">
+            <h1Para daltónicos</h1>
+            <p></p>
+            <p>Sabemos que Colora no es sencillo para las personas con daltonismo, por ello estamos buscando posibles soluciones que permitan jugar al mayor número de personas posibles. Por un lado estamos intentando crear acuerdos con empresas fabricantes de gafas para daltónicos. Contáctanos si eres una de estas empresas o estás interesado en comprar unas gafas para daltónicos.</p>
+            <p></p>
+            <p>Por otro lado, estamos pensando en formulas que permitan jugar a los daltónicos sin necesidad de gafas especiales. Contáctanos si estás interesado en probar o contribuir a crear estás forumlas.</p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h2>Contáctanos</h2>
+        <form action="mailto:ghgracia85@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido">
+                </div>
+                <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer id="SITE_FOOTER" class="footer">
+        <div data-mesh-id="SITE_FOOTERinlineContent" data-testid="inline-content">
+            <div data-mesh-id="SITE_FOOTERinlineContent-gridContainer" data-testid="mesh-container-content">
+                <div id="comp-lbktz6z5" class="KcpHeO tz5f0K comp-lbktz6z5 wixui-rich-text">
+                    <p><a href="mailto:ghgracia85@gmail.com" style="color: #e6b800;">ghgracia85@gmail.com</a></p>
+                    <p><a href="/colora-web/politica-de-privacidad.html" style="color: #e6b800;">Política de privacidad</a></p>
+                    <p class="font_8"><span style="letter-spacing:normal;">&copy; 2024 by Colora</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Añade tus scripts personalizados aquí
+    </script>
+</body>
+</html>
