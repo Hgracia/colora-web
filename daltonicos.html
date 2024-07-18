@@ -86,10 +86,17 @@
             gap: 20px;
             padding: 100px 200px;
         }
+        .content-form {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 100px 400px;
+            align-items: center;
+        }
         .contact-form {
             background-color: #fff;
             width: 600px;
-            padding: 50px 300px;
             align-items: center;
         }
         .contact-form h2 {
@@ -161,29 +168,31 @@
         <p>Sabemos que Colora no es sencillo para las personas con daltonismo, por ello estamos buscando posibles soluciones que permitan jugar al mayor número de personas posibles. Por un lado estamos intentando crear acuerdos con empresas fabricantes de gafas para daltónicos. Contáctanos si eres una de estas empresas o estás interesado en comprar unas gafas para daltónicos.</p>
         <p>Por otro lado, estamos pensando en formulas que permitan jugar a los daltónicos sin necesidad de gafas especiales. Contáctanos si estás interesado en probar o contribuir a crear estás forumlas.</p>
     </div>
-    <div class="contact-form">
-        <h2>Contáctanos</h2>
-        <form action="process_form.php" method="post">
-            <div class="form-row">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
+    <div class="content-form">
+        <div class="contact-form">
+            <h2>Contáctanos</h2>
+            <form action="process_form.php" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                    <div>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                 </div>
                 <div>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
                 </div>
-                <div>
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-            </div>
-            <div>
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
     <footer id="SITE_FOOTER" class="footer">
         <div data-mesh-id="SITE_FOOTERinlineContent" data-testid="inline-content">
